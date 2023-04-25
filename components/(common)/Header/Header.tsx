@@ -1,5 +1,4 @@
 import { MockImages } from '@/libs/Mock'
-import PUBLIC from '@/public'
 import Image from 'next/image'
 import React from 'react'
 
