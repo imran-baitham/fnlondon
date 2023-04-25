@@ -17,6 +17,7 @@ module.exports = {
         // ===========
         banneryellow: "#fab750",
         darkprimary: "#203140",
+        bgray: "#fefaf3",
       },
       boxShadow: {
         '3xl': '0 15px 40px rgba(10, 14, 18, 0.1)',

@@ -1,4 +1,4 @@
-import '../libs/styles/globals.css'
+import '../libs/Styles/globals.css'
 import { siteConfig } from '@/config'
 import { absoluteUrl } from '@/libs/Utils'
 import Provider from './Providers'
