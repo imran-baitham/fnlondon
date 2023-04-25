@@ -1,6 +1,7 @@
 import '../libs/styles/globals.css'
 import { siteConfig } from '@/config'
 import { absoluteUrl } from '@/libs/Utils'
+import Provider from './Providers'
 
 export const metadata = {
   title: {
@@ -64,8 +65,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Provider>{children}</Provider>
+      </body>
     </html>
   )
 }

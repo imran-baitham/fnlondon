@@ -1,3 +1,5 @@
+import { Banner } from '@/components'
+
 interface MarketingLayoutProps {
   children: React.ReactNode
 }
@@ -16,6 +18,7 @@ export default async function MarketingLayout({
       <footer>
         <h1>footer</h1>
       </footer>
+      <Banner />
     </>
   )
 }
