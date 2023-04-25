@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@800&family=Josefin+Sans:wght@600&family=Jost:wght@500&family=Montserrat:wght@300&family=Roboto:wght@100&family=Solitreo&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #__next {
+    @apply contents transition-all;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s;
+  }
+}
+
+.container_main {
+  max-width: 1200px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0% auto;
+}
+
+/* 
+.prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
+  font-weight: bold;
+  font-family: "Jost", sans-serif;
+}
+
+.token {
+  text-decoration: none !important;
+}
+
+.token>span {
+  color: rgb(150, 203, 254);
+}
+
+code>span {
+  color: theme("colors.zinc.100");
+}
+
+pre {
+  margin: 0% !important;
+} */
