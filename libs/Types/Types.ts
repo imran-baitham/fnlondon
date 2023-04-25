@@ -1,4 +1,9 @@
-export type SiteConfig = {
+export interface NavItem {
+  title: string;
+  href: string;
+}
+
+export interface SiteConfig {
   name: string;
   description: string;
   url: string;
@@ -7,4 +12,8 @@ export type SiteConfig = {
     twitter: string;
     github: string;
   };
-};
+}
+
+export interface MarketingConfig {
+  mainNav: NavItem[];
+}
