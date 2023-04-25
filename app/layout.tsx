@@ -24,10 +24,6 @@ export const metadata = {
     },
   ],
   creator: 'imranbaitham',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -56,7 +52,7 @@ export const metadata = {
     shortcut: '/favicon/favicon-16x16.png',
     apple: '/favicon/apple-touch-icon.png',
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  // manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
 export default function RootLayout({
