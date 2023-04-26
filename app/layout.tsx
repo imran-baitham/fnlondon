@@ -2,7 +2,7 @@ import '../libs/Styles/globals.css'
 import { siteConfig } from '@/config'
 import { absoluteUrl } from '@/libs/Utils'
 import Provider from './Providers'
-import { Banner } from '@/components'
+import { AlertModal, Banner } from '@/components'
 
 export const metadata = {
   title: {
@@ -68,6 +68,7 @@ export default function RootLayout({
           <>
             {children}
             <Banner />
+            <AlertModal />
           </>
         </Provider>
       </body>
