@@ -22,7 +22,7 @@ export default function Modal({ open, setOpen, children }: ModalProps) {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-[rgba(255,255,255,0.9)] bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-[rgba(255,255,255,0.7)] bg-opacity-75 transition-opacity" />
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 overflow-y-auto">
