@@ -1,3 +1,7 @@
+export { GrClose } from "@react-icons/all-files/gr/GrClose"; // close
+export { BiSearch } from "@react-icons/all-files/bi/BiSearch"; // search
+export { CgMenu } from "@react-icons/all-files/cg/CgMenu"; // Menu
+
 // ======== { use in app } ============
 export { FaRobot } from "@react-icons/all-files/fa/FaRobot";
 export { MdErrorOutline } from "@react-icons/all-files/md/MdErrorOutline";
@@ -25,7 +29,6 @@ export { BsPerson } from "@react-icons/all-files/bs/BsPerson"; // Person
 
 // ======= { Default Icons Not Used } =======
 export { BsBell } from "@react-icons/all-files/bs/BsBell";
-export { BiSearchAlt2 } from "@react-icons/all-files/bi/BiSearchAlt2";
 
 export { FaAngular } from "@react-icons/all-files/fa/FaAngular";
 export { FaYarn } from "@react-icons/all-files/fa/FaYarn";
