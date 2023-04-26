@@ -5,6 +5,7 @@ export { default as ReactIcon } from "./common/ReactIcon/ReactIcon";
 export { default as Button } from "./common/Button/Button";
 export { default as Icon } from "./reusable/Icon";
 export { default as Dropdown } from "./reusable/Dropdown";
+export { default as Ads } from "./reusable/Ads";
 
 // Mixture Components For Client Side Pages
 
