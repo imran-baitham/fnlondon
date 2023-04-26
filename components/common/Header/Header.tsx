@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <header className="w-full z-10 fixed top-0 left-0 right-0">
-      <nav className="max-w-[1200px] m-auto bg-darkprimary text-white">
+      <nav className="max-w-[1250px] m-auto bg-darkprimary text-white">
         <div className="flex justify-between items-center">
           <Link href={'/'}>
             <div className="flex items-center">
@@ -149,7 +149,7 @@ function Header() {
         </div>
       </nav>
       {/* Subheader Manu */}
-      <nav className="lg:flex flex-wrap gap-x-4 hidden max-w-[1200px] m-auto py-6 border-b-[1px] border-[#c8cccd] px-3.5 xl:px-0">
+      <nav className="lg:flex flex-wrap gap-x-4 hidden max-w-[1250px] m-auto py-6 border-b-[1px] border-[#c8cccd] px-3.5 xl:px-0 bg-bgray">
         {marketingConfig.mainNav.map((item, index) => (
           <Link
             href={item.href}
