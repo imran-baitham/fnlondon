@@ -49,7 +49,7 @@ function Header() {
                 </button>
               </div>
             </div>
-            <div className="pl-3.5">
+            <div className="pl-3.5 relative">
               <div className="hidden md:inline-flex">
                 {search ? (
                   <Icon
@@ -61,11 +61,24 @@ function Header() {
                   <Icon icon="BiSearch" onClick={() => setSearch(true)} />
                 )}
               </div>
-              {manu ? (
-                <Icon icon="GrClose" effect onClick={() => setMenu(false)} />
-              ) : (
-                <Icon icon="CgMenu" onClick={() => setMenu(true)} />
-              )}
+              <span>
+                {manu ? (
+                  <Icon icon="GrClose" effect onClick={() => setMenu(false)} />
+                ) : (
+                  <Icon icon="CgMenu" onClick={() => setMenu(true)} />
+                )}
+                {manu && (
+                  <div className="absolute right-0 z-10 sm:mt-0.5 w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
+                    {marketingConfig.mainNav.map((item, index) => (
+                      <Link href={item.href} key={index}>
+                        <h1 className="capitalize text-lg px-5 py-3.5 hover:bg-[#4d6172] hover:text-white transition-all">
+                          {item.title}
+                        </h1>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </span>
             </div>
           </div>
         </div>
