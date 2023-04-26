@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -10,7 +10,11 @@ import { classNames } from '@/libs/Utils'
 import { Icon } from '@/components'
 
 function Header() {
+  const [manu, setMenu] = useState<boolean>(false)
+  const [search, setSearch] = useState<boolean>(false)
+
   const router = usePathname()
+
   return (
     <header className="w-full z-10 fixed top-0 left-0 right-0">
       <nav className="max-w-[1200px] m-auto bg-darkprimary text-white">
@@ -46,27 +50,47 @@ function Header() {
               </div>
             </div>
             <div className="pl-3.5">
-              <Icon />
+              <div className="hidden md:inline-flex">
+                {search ? (
+                  <Icon
+                    icon="GrClose"
+                    effect
+                    onClick={() => setSearch(false)}
+                  />
+                ) : (
+                  <Icon icon="BiSearch" onClick={() => setSearch(true)} />
+                )}
+              </div>
+              {manu ? (
+                <Icon icon="GrClose" effect onClick={() => setMenu(false)} />
+              ) : (
+                <Icon icon="CgMenu" onClick={() => setMenu(true)} />
+              )}
             </div>
           </div>
         </div>
       </nav>
-      <nav className="max-w-[1200px] m-auto py-6 border-b-[1px] border-[#c8cccd]">
-        <div className="flex flex-wrap gap-x-4">
-          {marketingConfig.mainNav.map((item, index) => (
-            <Link
-              href={item.href}
-              key={index}
-              className={classNames(
-                router == item.href ? 'text-darktx' : '',
-                'text-[17px] capitalize text-gray-700 font-light',
-              )}
-            >
-              {item.title}
-            </Link>
-          ))}
-        </div>
+      <nav className="lg:flex flex-wrap gap-x-4 hidden max-w-[1200px] m-auto py-6 border-b-[1px] border-[#c8cccd] px-3.5 xl:px-0">
+        {marketingConfig.mainNav.map((item, index) => (
+          <Link
+            href={item.href}
+            key={index}
+            className={classNames(
+              router == item.href ? 'text-red-600' : '',
+              'text-[17px] capitalize text-gray-700 font-light',
+            )}
+          >
+            {item.title}
+          </Link>
+        ))}
       </nav>
+      {search && (
+        <div className="h-screen w-full bg-[rgba(32,49,64,.96)] fixed top-0 left-0 z-20">
+          <div className="text-white flex items-center justify-center h-full">
+            <h1 className="text-xl font-bold">Comming Soon</h1>
+          </div>
+        </div>
+      )}
     </header>
   )
 }
