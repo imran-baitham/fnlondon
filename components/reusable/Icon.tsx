@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactIcon } from '../index'
-import { TAppIcons } from '../(common)/ReactIcon/ReactIcon'
+import { TAppIcons } from '../common/ReactIcon/ReactIcon'
 import { classNames } from '@/libs/Utils'
 
 interface IconProps {
