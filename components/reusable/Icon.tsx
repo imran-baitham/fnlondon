@@ -7,15 +7,16 @@ interface IconProps {
   icon?: TAppIcons
   effect?: boolean
   onClick?: () => void
+  className?: string
 }
 
-function Icon({ icon, onClick, effect = false }: IconProps) {
+function Icon({ icon, onClick, className, effect = false }: IconProps) {
   return (
     <button
       className={classNames(
         effect ? 'border border-iconclr bg-iconclr' : '',
-        'group border border-transparent focus:border-iconclr p-5 focus:bg-iconclr transition-all',
-        "z-30"
+        'group border border-transparent focus:border-iconclr p-5 focus:bg-iconclr transition-all z-30',
+        `${className}`,
       )}
       onClick={() => onClick && onClick()} // fix: properly invoke the onClick function
     >
