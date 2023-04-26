@@ -39,4 +39,34 @@ export const marketingConfig: MarketingConfig = {
       href: "/lists",
     },
   ],
+  userNav: [
+    {
+      title: "MY ACCOUNT",
+      href: "##",
+    },
+    {
+      title: "Customer Centre",
+      href: "##",
+    },
+    {
+      title: "Subscriber Benefits",
+      href: "##",
+    },
+    {
+      title: "Newsletters",
+      href: "##",
+    },
+    {
+      title: "Saved Articles",
+      href: "##",
+    },
+    {
+      title: "Author Follows",
+      href: "##",
+    },
+    {
+      title: "Sign Out",
+      href: "##",
+    },
+  ],
 };

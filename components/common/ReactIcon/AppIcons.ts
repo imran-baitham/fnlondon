@@ -1,6 +1,7 @@
 export { GrClose } from "@react-icons/all-files/gr/GrClose"; // close
 export { BiSearch } from "@react-icons/all-files/bi/BiSearch"; // search
 export { CgMenu } from "@react-icons/all-files/cg/CgMenu"; // Menu
+export { BsPersonFill } from "@react-icons/all-files/bs/BsPersonFill";
 
 // ======== { use in app } ============
 export { FaRobot } from "@react-icons/all-files/fa/FaRobot";
@@ -25,7 +26,7 @@ export { RiMoonClearLine } from "@react-icons/all-files/ri/RiMoonClearLine"; // 
 export { ImSun } from "@react-icons/all-files/im/ImSun"; // Sun
 
 export { RiNotification3Line } from "@react-icons/all-files/ri/RiNotification3Line"; // Notifaction
-export { BsPerson } from "@react-icons/all-files/bs/BsPerson"; // Person
+// export { BsPerson } from "@react-icons/all-files/bs/BsPerson"; // Person
 
 // ======= { Default Icons Not Used } =======
 export { BsBell } from "@react-icons/all-files/bs/BsBell";
@@ -192,7 +193,6 @@ export { IoMdQuote } from "@react-icons/all-files/io/IoMdQuote";
 
 // hotalware
 
-export { BsPersonFill } from "@react-icons/all-files/bs/BsPersonFill";
 export { FaSearch } from "@react-icons/all-files/fa/FaSearch";
 export { RiSearch2Fill } from "@react-icons/all-files/ri/RiSearch2Fill";
 export { HiShoppingCart } from "@react-icons/all-files/hi/HiShoppingCart";

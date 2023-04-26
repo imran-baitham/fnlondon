@@ -16,4 +16,5 @@ export interface SiteConfig {
 
 export interface MarketingConfig {
   mainNav: NavItem[];
+  userNav: NavItem[];
 }
