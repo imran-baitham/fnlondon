@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -10,10 +10,19 @@ import { classNames } from '@/libs/Utils'
 import { Icon } from '@/components'
 
 function Header() {
+  const router = usePathname()
   const [manu, setMenu] = useState<boolean>(false)
   const [search, setSearch] = useState<boolean>(false)
 
-  const router = usePathname()
+  useEffect(() => {
+    function handleClick(event: MouseEvent) {
+      setMenu(false)
+    }
+    document.addEventListener('click', handleClick)
+    return () => {
+      document.removeEventListener('click', handleClick)
+    }
+  }, [manu])
 
   return (
     <header className="w-full z-10 fixed top-0 left-0 right-0">
@@ -68,10 +77,17 @@ function Header() {
                   <Icon icon="CgMenu" onClick={() => setMenu(true)} />
                 )}
                 {manu && (
-                  <div className="absolute right-0 z-10 sm:mt-0.5 w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
+                  <div className="absolute right-0 z-10 sm:mt-0.5 w-[285px] sm:w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
                     {marketingConfig.mainNav.map((item, index) => (
                       <Link href={item.href} key={index}>
-                        <h1 className="capitalize text-lg px-5 py-3.5 hover:bg-[#4d6172] hover:text-white transition-all">
+                        <h1
+                          className={classNames(
+                            router == item.href
+                              ? 'bg-[#4d6172] text-white'
+                              : '',
+                            'capitalize text-lg px-4 py-3 sm:px-5 sm:py-3.5 hover:bg-[#4d6172] hover:text-white transition-all',
+                          )}
+                        >
                           {item.title}
                         </h1>
                       </Link>
