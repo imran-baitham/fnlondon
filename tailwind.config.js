@@ -22,7 +22,8 @@ module.exports = {
         bgray: "#fefaf3",
         darktx: "#f37056",
         yellowtx: "#f3715e",
-        iconclr: "#fdb456"
+        iconclr: "#fdb456",
+        artmints: "#51a5c7"
       },
       boxShadow: {
         '3xl': '0 15px 40px rgba(10, 14, 18, 0.1)',

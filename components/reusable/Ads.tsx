@@ -10,13 +10,12 @@ interface ImageProps {
 }
 
 function Ads() {
-  const [imageUrl, setImageUrl] = useState('/static/Ads/godaddy.png')
+  const [imageUrl, setImageUrl] = useState('/static/Ads/adsgif.gif')
   const [linkUrl, setLinkUrl] = useState('/')
 
   useEffect(() => {
     const images: ImageProps[] = [
       { url: '/static/Ads/godaddy.png', link: '/godaddy' },
-      { url: '/static/Ads/fnads.png', link: '/fnads' },
       { url: '/static/Ads/adsgif.gif', link: '/adsgif' },
       { url: '/static/Ads/newads.gif', link: '/adsgif' },
     ]
@@ -38,7 +37,7 @@ function Ads() {
   }, [])
 
   return (
-    <div className="relative w-full h-[200px] md:w-[970px] md:h-[250px]">
+    <div className="relative w-full md:w-[970px] md:h-[250px]">
       <Link href={linkUrl}>
         <Image
           src={imageUrl}
