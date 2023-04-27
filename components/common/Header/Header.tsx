@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import { marketingConfig } from '@/config'
 import { MockImages } from '@/libs/Mock'
 import { classNames } from '@/libs/Utils'
-import { Icon } from '@/components'
+import { Button, Icon, NavList } from '@/components'
 
 function Header() {
   const router = usePathname()
@@ -15,7 +15,8 @@ function Header() {
   const [user, setUser] = useState<boolean>(false)
   const [search, setSearch] = useState<boolean>(false)
 
-  const UserLogin: boolean = false
+  const UserLogin: boolean = true
+  const username: string = 'Imran Baitham'
 
   useEffect(() => {
     function handleClick(event: MouseEvent) {
@@ -30,19 +31,33 @@ function Header() {
     }
   }, [manu, user])
 
+  const handleStopped = (e: any) => {
+    e.stopPropagation()
+  }
+
   return (
     <header className="w-full z-10 fixed top-0 left-0 right-0">
       <nav className="max-w-[1250px] m-auto bg-darkprimary text-white">
         <div className="flex justify-between items-center">
           <Link href={'/'}>
             <div className="flex items-center">
-              <Image
-                src={MockImages.logo}
-                alt="fnlondon"
-                width={75}
-                height={75}
-              />
-              <h1 className="text-lg pl-4">Financial News</h1>
+              <div>
+                <Image
+                  src={MockImages.logo}
+                  alt="fnlondon"
+                  width={75}
+                  height={75}
+                  className="hidden md:inline-block"
+                />
+                <Image
+                  src={MockImages.logo}
+                  alt="fnlondon"
+                  width={55}
+                  height={55}
+                  className="md:hidden inline-block"
+                />
+              </div>
+              <h1 className="text-md md:text-lg pl-4">Financial News</h1>
             </div>
           </Link>
           <div className="flex items-center">
@@ -70,7 +85,15 @@ function Header() {
             <div className="pl-3.5 relative">
               {/* Login */}
               {UserLogin && (
-                <div className="hidden md:inline-flex overflow-visible relative">
+                <div className="hidden md:inline-flex items-center overflow-visible relative">
+                  <h1
+                    className="absolute -left-[90px] w-[90px] overflow-visible font-medium cursor-pointer"
+                    onClick={() => setUser(true)}
+                  >
+                    {username.length > 6
+                      ? username.slice(0, 6) + '...'
+                      : username}
+                  </h1>
                   <span>
                     {user ? (
                       <Icon
@@ -88,18 +111,11 @@ function Header() {
                     {user && (
                       <div className="absolute right-0 z-10 sm:mt-0.5 w-[285px] sm:w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
                         {marketingConfig.userNav.map((item, index) => (
-                          <Link href={item.href} key={index}>
-                            <h1
-                              className={classNames(
-                                router == item.href
-                                  ? 'bg-[#4d6172] text-white'
-                                  : '',
-                                'capitalize text-lg px-4 py-3 sm:px-5 sm:py-3.5 hover:bg-[#4d6172] hover:text-white transition-all',
-                              )}
-                            >
-                              {item.title}
-                            </h1>
-                          </Link>
+                          <NavList
+                            title={item.title}
+                            href={item.href}
+                            key={index}
+                          />
                         ))}
                       </div>
                     )}
@@ -121,26 +137,64 @@ function Header() {
               {/* Menu Navagations */}
               <span>
                 {manu ? (
-                  <Icon icon="GrClose" effect onClick={() => setMenu(false)} />
+                  <Icon
+                    icon="GrClose"
+                    className="p-[11px] md:p-5"
+                    effect
+                    onClick={() => setMenu(false)}
+                  />
                 ) : (
-                  <Icon icon="CgMenu" onClick={() => setMenu(true)} />
+                  <Icon
+                    icon="CgMenu"
+                    className="p-[11px] md:p-5"
+                    onClick={() => setMenu(true)}
+                  />
                 )}
                 {manu && (
-                  <div className="absolute right-0 z-10 sm:mt-0.5 w-[285px] sm:w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
-                    {marketingConfig.mainNav.map((item, index) => (
-                      <Link href={item.href} key={index}>
-                        <h1
-                          className={classNames(
-                            router == item.href
-                              ? 'bg-[#4d6172] text-white'
-                              : '',
-                            'capitalize text-lg px-4 py-3 sm:px-5 sm:py-3.5 hover:bg-[#4d6172] hover:text-white transition-all',
-                          )}
+                  <div>
+                    <div className="hidden md:inline-block absolute right-0 z-10 sm:mt-0.5 w-[285px] sm:w-[300px] sm:origin-top-right shadow bg-[#2f3f4d] text-[#a7afb3]">
+                      {marketingConfig.mainNav.map((item, index) => (
+                        <NavList
+                          title={item.title}
+                          href={item.href}
+                          key={index}
+                        />
+                      ))}
+                    </div>
+                    <div
+                      onClick={handleStopped}
+                      className="block md:hidden fixed left-0 z-10 sm:mt-0 shadow bg-[#2f3f4d] text-[#a7afb3] w-full h-screen"
+                    >
+                      <div className="p-2">
+                        <input
+                          type="search"
+                          placeholder="Search"
+                          className="w-full bg-[#203140] p-4 rounded-full"
+                        />
+                      </div>
+                      <div className="overflow-y-auto h-96 sm:h-auto">
+                        {/* // #c8cccd = srcoll color*/}
+                        {marketingConfig.mainNav.map((item, index) => (
+                          <NavList
+                            title={item.title}
+                            href={item.href}
+                            key={index}
+                          />
+                        ))}
+                      </div>
+                      <div className="flex gap-2 px-2 fixed w-full bottom-2">
+                        <Button className="capitalize" transparent full sm>
+                          sign in
+                        </Button>
+                        <Button
+                          sm
+                          className="capitalize bg-white border-white"
+                          full
                         >
-                          {item.title}
-                        </h1>
-                      </Link>
-                    ))}
+                          subscribe
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 )}
               </span>

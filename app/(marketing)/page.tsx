@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <section className="container_main">
-      <div className="flex justify-center">
+      <div className="md:flex justify-center hidden">
         <Ads />
       </div>
       <div className="py-2 border-t-[1px] border-[#c8cccd] mt-2">
@@ -34,9 +34,7 @@ export default function Home() {
                   </h1>
                   <div className="relative w-full md:h-full rounded pb-6">
                     <Image
-                      src={
-                        'https://images.fnlondon.com/im-769736?width=632&height=421'
-                      }
+                      src={'/static/Ads/fnlondonblog.jpeg'}
                       alt="fnlondon ads"
                       width={100}
                       height={100}

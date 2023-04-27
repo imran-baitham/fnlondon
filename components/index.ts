@@ -7,6 +7,7 @@ export { default as Icon } from "./reusable/Icon";
 export { default as Dropdown } from "./reusable/Dropdown";
 export { default as Ads } from "./reusable/Ads";
 export { default as Sticky } from "./reusable/Sticky";
+export { default as NavList } from "./reusable/NavList";
 
 // Mixture Components For Client Side Pages
 

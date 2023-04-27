@@ -43,7 +43,7 @@ const Button = ({
           sm ? 'px-3 py-2 leading-4 rounded text-sm' : '',
           lg ? 'px-4 py-2 text-base' : '',
           xl ? 'px-6 py-3 text-base' : '',
-          transparent ? 'bg-bg-darktx dark:bg-orng-normal' : '',
+          transparent ? 'bg-darktx dark:bg-orng-normal' : '',
           danger ? 'bg-red-500 text-white border-red-500' : '',
           isDisabled ? isDisabled : '',
           className,
@@ -54,7 +54,7 @@ const Button = ({
       <div
         className={classNames(
           effect
-            ? 'absolute inset-0 w-0 bg-orng-medium dark:bg-orng-normal transition-all duration-[250ms] ease-out group-hover:w-full'
+            ? 'absolute inset-0 w-0 bg-darktx dark:bg-orng-normal transition-all duration-[250ms] ease-out group-hover:w-full'
             : '',
         )}
       />
