@@ -202,33 +202,3 @@ export default function Home() {
     </section>
   )
 }
-
-{
-  /*   <div className="w-full">
-  
-            <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-3">
-        
-              <div className="grid grid-cols-1 gap-4 lg:col-span-2">
-                <section aria-labelledby="section-1-title">
-                  <h2 className="sr-only" id="section-1-title">
-                    Section title
-                  </h2>
-                  <div className="overflow-hidden rounded-lg bg-white shadow">
-                    <div className="p-6">asdfasdf 1</div>
-                  </div>
-                </section>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4">
-                <section aria-labelledby="section-2-title">
-                  <h2 className="sr-only" id="section-2-title">
-                    Section title
-                  </h2>
-                  <div className="overflow-hidden rounded-lg bg-white shadow">
-                    <div className="p-6"> asdfasdf 2</div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div> (*/
-}

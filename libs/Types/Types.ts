@@ -18,3 +18,8 @@ export interface MarketingConfig {
   mainNav: NavItem[];
   userNav: NavItem[];
 }
+
+export interface UserDataProps {
+  title: string;
+  href: string;
+}

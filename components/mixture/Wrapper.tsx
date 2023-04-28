@@ -18,14 +18,14 @@ function Wrapper({
         {/* Left sidebar & main wrapper */}
         <div className="flex-1 xl:flex gap-x-2">
           {/* Left column area */}
-          <div className="xl:w-1/3">{LeftColumn}</div>
+          {LeftColumn && <div className="xl:w-1/3">{LeftColumn}</div>}
 
           {/* Main area */}
           <div className="xl:flex-1">{Content}</div>
         </div>
 
         {/* Right column area */}
-        <div className="shrink-0 lg:w-80">{RightColumn}</div>
+        {RightColumn && <div className="shrink-0 lg:w-80">{RightColumn}</div>}
       </div>
     </div>
   )

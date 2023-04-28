@@ -1,6 +1,7 @@
 import { NavItem } from '@/libs/Types'
 import React from 'react'
 import Badge from './Badge'
+import Link from 'next/link'
 
 const categories: NavItem[] = [
   { title: 'Accountancy', href: '/' },
@@ -22,6 +23,7 @@ const categories: NavItem[] = [
   { title: 'Newspaper', href: '/' },
   { title: 'Lists', href: '/' },
 ]
+
 interface FilterTopicProps {
   className?: string
 }
@@ -31,7 +33,9 @@ function FilterTopic({ className }: FilterTopicProps) {
     <div className={`w-full ${className}`}>
       <div className="flex justify-between">
         <h1 className="font-medium">FILTER BY TOPIC</h1>
-        <span className="text-darktx text-sm font-medium">See All</span>
+        <Link href={'/topics'}>
+          <span className="text-darktx text-sm font-medium">See All</span>
+        </Link>
       </div>
 
       <div className="py-3 items-center flex flex-wrap gap-1">
