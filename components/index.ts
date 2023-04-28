@@ -15,3 +15,4 @@ export { default as FilterTopic } from "./reusable/FilterTopic";
 
 export { default as AlertModal } from "./mixture/AlertModal";
 export { default as Wrapper } from "./mixture/Wrapper";
+export { default as GenericFilter } from "./mixture/GenericFilter";

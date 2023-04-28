@@ -25,6 +25,10 @@
   margin: 0% auto;
 }
 
+.myfont {
+  font-family: 'Publico Headline Web', times, serif;
+}
+
 /* 
 .prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
   font-weight: bold;
