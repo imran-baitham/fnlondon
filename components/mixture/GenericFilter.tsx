@@ -28,7 +28,7 @@ function GenericFilter({
 }: GenericFilterProps) {
   const { filteredList } = GenericFilterHook({ data })
   const [dataList, setDataList] = useState(filteredList)
-  const [activeTab, setActiveTab] = useState('all')
+  const [activeTab, setActiveTab] = useState(pagination[0])
 
   const handleChange = (value: string) => {
     let char = ''
@@ -71,7 +71,7 @@ function GenericFilter({
         <h1 className="text-xl font-light text-blue-400">{title}</h1>
       </div>
       <div className="md:grid md:grid-cols-2 flex flex-col-reverse items-center justify-between w-full">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-1 w-full">
+        <div className="grid grid-cols-3 lg:grid-cols-5 gap-1 w-full">
           {pagination.map((list, index) => {
             return (
               <button
@@ -80,7 +80,7 @@ function GenericFilter({
                   activeTab === list
                     ? 'bg-darkprimary text-white'
                     : 'bg-darktx text-white',
-                  'border py-2 font-[450] rounded-full',
+                  'border py-1.5 rounded-full font-bold myfont sm:text-lg letterspac',
                 )}
                 onClick={() => handleClickBtn(list)}
               >
@@ -89,12 +89,12 @@ function GenericFilter({
             )
           })}
         </div>
-        <div className="mb-8 md:mb-0 flex items-center justify-end w-full">
+        <div className="mb-2 md:mb-0 flex items-center justify-end w-full">
           <input
-            type="text"
+            type="search"
             placeholder="Search topics ..."
             className={
-              'bg-transparent w-full md:w-auto border-2 rounded-full border-gray-400 outline-none py-[6px] px-5 focus:border-darkprimary'
+              'bg-transparent ml-0 md:ml-2 xl:ml-0 w-full lg:w-full xl:w-auto md:w-auto border-2 rounded-full border-gray-400 outline-none py-[6px] px-5 focus:border-darkprimary'
             }
             onChange={(value: ChangeEvent<HTMLInputElement>) =>
               handleChange(value.target.value)
@@ -123,7 +123,7 @@ function GenericFilter({
             })}
           </div>
         ) : (
-          <div className="w-full flex items-center justify-center h-[400px]">
+          <div className="w-full flex items-center justify-center h-[400px] md:h-[600px]">
             <div className="text-center w-[400px]">
               <img
                 src={
@@ -132,8 +132,8 @@ function GenericFilter({
                 alt=""
                 className="m-auto"
               />
-              <h1 className="font-bold text-4xl py-4">No results</h1>
-              <p className="px-10 text-sm">
+              <h1 className="font-bold text-3xl py-4 mt-2">No results</h1>
+              <p className="px-10 text-lg font-[Jost]">
                 No results containing all your search terms were found.
               </p>
             </div>

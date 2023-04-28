@@ -198,6 +198,13 @@ export default function Home() {
             </div>
           </div>
         }
+        RightColumn={
+          <Sticky>
+            <div className="overflow-hidden rounded-lg bg-white shadow">
+              <div className="p-6 text-xl">Just for Practice</div>
+            </div>
+          </Sticky>
+        }
       />
     </section>
   )
