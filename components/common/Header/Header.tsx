@@ -15,7 +15,7 @@ function Header() {
   const [user, setUser] = useState<boolean>(false)
   const [search, setSearch] = useState<boolean>(false)
 
-  const UserLogin: boolean = true
+  const UserLogin: boolean = false
   const username: string = 'Imran Baitham'
 
   useEffect(() => {

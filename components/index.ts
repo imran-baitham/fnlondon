@@ -8,7 +8,10 @@ export { default as Dropdown } from "./reusable/Dropdown";
 export { default as Ads } from "./reusable/Ads";
 export { default as Sticky } from "./reusable/Sticky";
 export { default as NavList } from "./reusable/NavList";
+export { default as Badge } from "./reusable/Badge";
+export { default as FilterTopic } from "./reusable/FilterTopic";
 
 // Mixture Components For Client Side Pages
 
 export { default as AlertModal } from "./mixture/AlertModal";
+export { default as Wrapper } from "./mixture/Wrapper";
