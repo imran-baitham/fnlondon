@@ -10,7 +10,7 @@ export default function Topics() {
         Content={
           <div className="lg:pr-2">
             <GenericFilter
-              pagination={['All', 'B-D', 'D-M', 'M-S', 'S-Z']}
+              pagination={['All', 'A-D', 'D-M', 'M-S', 'S-Z']}
               data={[]}
               className="pb-32"
             />

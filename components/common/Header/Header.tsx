@@ -221,7 +221,7 @@ function Header() {
       {search && (
         <div className="h-screen w-full bg-[rgba(32,49,64,.96)] fixed top-0 left-0 z-20">
           <div className="text-white flex items-center justify-center h-full">
-            <h1 className="text-xl font-bold">Comming Soon</h1>
+            <h1 className="text-xl font-bold">Search Box</h1>
           </div>
         </div>
       )}

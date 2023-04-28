@@ -29,6 +29,11 @@
   font-family: 'Publico Headline Web', times, serif;
 }
 
+.letterspac {
+  letter-spacing: 2px;
+}
+
+
 /* 
 .prose :where(ol > li):not(:where([class~="not-prose"] *))::marker {
   font-weight: bold;

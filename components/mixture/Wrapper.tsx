@@ -1,3 +1,6 @@
+import { classNames } from '@/libs/Utils'
+import { overrideTailwindClasses } from 'tailwind-override'
+
 interface WrapperProps {
   LeftColumn?: React.ReactNode
   Content: React.ReactNode
@@ -9,10 +12,14 @@ function Wrapper({
   LeftColumn,
   Content,
   RightColumn,
-  className,
+  className = '',
 }: WrapperProps) {
   return (
-    <div className={`py-2 border-t-[1px] border-[#c8cccd] mt-2.5 ${className}`}>
+    <div
+      className={overrideTailwindClasses(
+        classNames('py-2 border-t-[1px] border-[#c8cccd] mt-2.5', className),
+      )}
+    >
       {/* 3 column wrapper */}
       <div className="mx-auto w-full grow lg:flex gap-x-2">
         {/* Left sidebar & main wrapper */}
