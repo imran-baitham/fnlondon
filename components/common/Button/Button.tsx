@@ -38,12 +38,12 @@ const Button = ({
           'cursor-pointer px-3 py-2',
           'group relative font-medium',
           'overflow-hidden outline-none',
-          'border-2 border-darktx dark:border-orng-normal px-5 py-2 mt-2',
+          'border-2 border-darktx px-5 py-2 mt-2',
           full ? 'w-full' : '',
           sm ? 'px-3 py-2 leading-4 rounded text-sm' : '',
           lg ? 'px-4 py-2 text-base' : '',
           xl ? 'px-6 py-3 text-base' : '',
-          transparent ? 'bg-darktx dark:bg-orng-normal' : '',
+          transparent ? 'bg-darktx' : '',
           danger ? 'bg-red-500 text-white border-red-500' : '',
           isDisabled ? isDisabled : '',
           className,
@@ -54,13 +54,13 @@ const Button = ({
       <div
         className={classNames(
           effect
-            ? 'absolute inset-0 w-0 bg-darktx dark:bg-orng-normal transition-all duration-[250ms] ease-out group-hover:w-full'
+            ? 'absolute inset-0 w-0 bg-darktx transition-all duration-[250ms] ease-out group-hover:w-full'
             : '',
         )}
       />
       <span
         className={classNames(
-          isDisabled ? '' : 'relative dark:text-white text-black',
+          isDisabled ? '' : 'relative text-black',
           effect ? 'group-hover:text-white' : '',
           transparent ? 'text-white' : '',
         )}

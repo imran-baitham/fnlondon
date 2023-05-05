@@ -10,6 +10,7 @@ export { default as Sticky } from "./reusable/Sticky";
 export { default as NavList } from "./reusable/NavList";
 export { default as Badge } from "./reusable/Badge";
 export { default as FilterTopic } from "./reusable/FilterTopic";
+export { default as OnTheMove } from "./common/OnTheMove/OnTheMove";
 
 // Mixture Components For Client Side Pages
 

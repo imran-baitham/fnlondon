@@ -1,6 +1,5 @@
 'use client'
 
-import { ThemeProvider } from 'next-themes'
 import { useEffect, useState } from 'react'
 
 export default function Provider({ children }: { children: React.ReactNode }) {
@@ -11,9 +10,5 @@ export default function Provider({ children }: { children: React.ReactNode }) {
     }
   }, [])
 
-  return (
-    <ThemeProvider attribute="class">
-      {hydration ? <>{children}</> : <></>}
-    </ThemeProvider>
-  )
+  return <>{hydration ? <>{children}</> : <></>}</>
 }
