@@ -1,4 +1,4 @@
-import { Ads, FilterTopic, Sticky, Wrapper } from '@/components'
+import { Ads, FilterTopic, OnTheMove, Sticky, Wrapper } from '@/components'
 import Image from 'next/image'
 
 export default function Home() {
@@ -199,13 +199,45 @@ export default function Home() {
           </div>
         }
         RightColumn={
-          <Sticky>
+          <div className="h-full">
             <div className="overflow-hidden rounded-lg bg-white shadow">
               <div className="p-6 text-xl">Just for Practice</div>
             </div>
-          </Sticky>
+            <div className="h-[95%]">
+              <Sticky>
+                <OnTheMove />
+              </Sticky>
+            </div>
+          </div>
         }
       />
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+          nemo repudiandae tenetur nobis eveniet quis animi temporibus
+          aspernatur libero ab sit saepe nihil eaque tempore, dicta laudantium
+          sequi iure. Distinctio, praesentium. Dolor praesentium aperiam totam
+          velit eius accusamus sapiente iste. Quo natus deleniti sunt voluptatem
+          quas ratione iure voluptatum consequuntur veniam laudantium ullam
+          dolores debitis eligendi recusandae quam eum architecto, accusantium
+          incidunt modi ipsa earum reiciendis? Eum nemo voluptatibus velit
+          voluptatum incidunt quo totam numquam impedit vitae esse molestias
+          enim quam, deserunt laudantium minima nesciunt facere illum
+          repudiandae excepturi est dicta. Quos eius perspiciatis dolore at. Et
+          maiores voluptatibus fugiat esse consectetur vel itaque molestiae sunt
+          sint dolores asperiores quod vero recusandae labore beatae, iure
+          perferendis ex modi, tempore accusamus id est ad. Culpa nihil unde
+          iure facere necessitatibus dicta dolorem possimus cupiditate sapiente
+          tempore. Nesciunt ducimus minus nihil, sunt non ullam incidunt eos
+          repellat, culpa doloremque nostrum libero aliquam nam vero excepturi,
+          esse deleniti rerum voluptatibus beatae officia. Fugiat quasi
+          quibusdam, maxime alias aliquid itaque assumenda quidem a enim modi
+          cupiditate sapiente! Voluptas atque sunt, excepturi sed blanditiis
+          libero magni officia labore vitae quibusdam fuga ex ullam quasi
+          cupiditate soluta eaque qui tenetur praesentium at officiis iure.
+          Blanditiis, repellat.
+        </p>
+      </div>
     </section>
   )
 }

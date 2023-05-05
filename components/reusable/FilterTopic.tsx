@@ -32,7 +32,7 @@ function FilterTopic({ className }: FilterTopicProps) {
   return (
     <div className={`w-full ${className}`}>
       <div className="flex justify-between">
-        <h1 className="font-medium">FILTER BY TOPIC</h1>
+        <h1 className="text-sm font-thin text-[#4d6172]">FILTER BY TOPIC</h1>
         <Link href={'/topics'}>
           <span className="text-darktx text-sm font-medium">See All</span>
         </Link>
